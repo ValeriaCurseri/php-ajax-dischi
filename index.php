@@ -1,6 +1,19 @@
 <!-- Utilizzare: Html, Sass, JS, jQuery, handlebars, PHP
 Stampiamo i dischi solo con l’utilizzo di PHP, che stampa direttamente i dischi in pagina: al caricamento della pagina ci saranno tutti i dischi. -->
 
+<?php 
+
+    include 'db.php';
+
+    // foreach ($database as $disco){
+    //     echo $disco['author'];
+    //     echo $disco['title'];
+    //     echo $disco['poster'];
+    //     echo $disco['year'];
+    // }
+
+?>
+
 <!DOCTYPE html>
 <html lang="it" dir="ltr">
     <head>
@@ -22,13 +35,28 @@ Stampiamo i dischi solo con l’utilizzo di PHP, che stampa direttamente i disch
         <main>
             <div class="container">
                 <div id="dischi">
-
+                    <?php foreach ($database as $disco){ ?>
+                    <div class="disco">
+                        <img src="<?php echo $disco['poster']; ?>" alt="<?php echo $disco['title']; ?>, album di <?php echo $disco['author']; ?> del {{year}}">
+                        <span class='titolo'><?php echo $disco['title']; ?></span>
+                        <span class='autore'><?php echo $disco['author']; ?></span>
+                        <span class='anno'><?php echo $disco['year']; ?></span>
+                    </div>
+                    <?php } ?>
                 </div>
+                <!-- <div id="dischi">
+                    <div class="disco">
+                        <img src="{{poster}}" alt="{{title}}, album di {{author}} del {{year}}">
+                        <span class='titolo'>{{title}}</span>
+                        <span class='autore'>{{author}}</span>
+                        <span class='anno'>{{year}}</span>
+                    </div>
+                </div> -->
             </div>
         </main>
     </body>
 
-    <script id="disco-template" type="text/x-handlebars-template">
+    <!-- <script id="disco-template" type="text/x-handlebars-template">
         <div class="disco">
             <img src="{{poster}}" alt="{{title}}, album di {{author}} del {{year}}">
             <span class='titolo'>{{title}}</span>
@@ -37,5 +65,5 @@ Stampiamo i dischi solo con l’utilizzo di PHP, che stampa direttamente i disch
         </div>
     </script>
 
-    <script type="text/javascript" src="dist/app.js"></script>
+    <script type="text/javascript" src="dist/app.js"></script> -->
 </html>
