@@ -1,16 +1,6 @@
-<!-- Utilizzare: Html, Sass, JS, jQuery, handlebars, PHP
-Stampiamo i dischi solo con l’utilizzo di PHP, che stampa direttamente i dischi in pagina: al caricamento della pagina ci saranno tutti i dischi. -->
-
 <?php 
 
     include 'db.php';
-
-    // foreach ($database as $disco){
-    //     echo $disco['author'];
-    //     echo $disco['title'];
-    //     echo $disco['poster'];
-    //     echo $disco['year'];
-    // }
 
 ?>
 
@@ -37,7 +27,7 @@ Stampiamo i dischi solo con l’utilizzo di PHP, che stampa direttamente i disch
                 <div id="dischi">
                     <?php foreach ($database as $disco){ ?>
                     <div class="disco">
-                        <img src="<?php echo $disco['poster']; ?>" alt="<?php echo $disco['title']; ?>, album di <?php echo $disco['author']; ?> del {{year}}">
+                        <img class='copertina' src="<?php echo $disco['poster']; ?>" alt="<?php echo $disco['title']; ?>, album di <?php echo $disco['author']; ?> del <?php echo $disco['year']; ?>">
                         <span class='titolo'><?php echo $disco['title']; ?></span>
                         <span class='autore'><?php echo $disco['author']; ?></span>
                         <span class='anno'><?php echo $disco['year']; ?></span>
