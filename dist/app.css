@@ -1,3 +1,5 @@
+/*commons*/
+
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +11,8 @@
   width: 75%;
   margin: 0 auto;
 }
+
+/*header*/
 
 header {
   width: 100%;
@@ -25,6 +29,8 @@ header {
 header .container #logo img {
   height: 50px;
 }
+
+/*main*/
 
 main {
   height: calc(100vh - 70px);

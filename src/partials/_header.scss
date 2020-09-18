@@ -1,0 +1,15 @@
+header{
+    width:100%;
+    height:70px;
+    background-color: #000;
+    position:fixed;
+    top:0;
+    @include flex(row,normal,center);
+    .container{
+        #logo{
+            img{
+                height: 50px;
+            }
+        }
+    }
+}

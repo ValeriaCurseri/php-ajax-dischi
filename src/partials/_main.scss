@@ -1,0 +1,31 @@
+main{
+    height:calc(100vh - 70px);
+    width:100%;
+    position:fixed;
+    bottom:0;
+    background-color: #191919;
+    padding:100px 0;
+    overflow-y: scroll;
+    #dischi{
+        @include flex(row,space-between,center);
+        flex-wrap: wrap;
+        .disco{
+            @include flex(column,normal,center);
+            width:30%;
+            min-height:450px;
+            background-color: #000;
+            color:lightgray;
+            padding:20px;
+            margin-bottom:20px;
+            text-align: center;
+            img.copertina{
+                width: -webkit-fill-available;
+            }
+            .titolo{
+                color:#fff;
+                font-size: 24px;
+                padding:10px 0;
+            }
+        }
+    }
+}
