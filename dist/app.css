@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 75%;
+  margin: 0 auto;
+  border: 1px solid red;
+}
+
+header {
+  width: 100%;
+  height: 70px;
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: normal;
+  align-items: center;
+}
+
+header .container #logo img {
+  height: 50px;
+}
+
+main {
+  height: calc(100vh - 70px);
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: #191919;
+  padding-top: 100px;
+}
+
+main #dischi {
+  display: flex;
+  flex-direction: row;
+  justify-content: normal;
+  align-items: center;
+}
+
+main #dischi .disco {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  width: 33%;
+  height: 200px;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid red;
+}
+
